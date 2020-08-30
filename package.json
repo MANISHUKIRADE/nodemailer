@@ -1,0 +1,60 @@
+{
+  "name": "v1",
+  "version": "1.0.0",
+  "description": "main api server ",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "onchange": "^7.0.2",
+    "mocha": "^8.1.1",
+    "prettier": "2.0.5",
+    "prettier-standard": "^16.4.1",
+    "sinon": "^9.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "git add"
+    ],
+    "*.{js}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "start": "npm index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MANISHUKIRADE/nodemailer"
+  },
+  "keywords": [
+    "v1"
+  ],
+  "author": "Manish Ukirade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MANISHUKIRADE/nodemailer/issues"
+  },
+  "homepage": "https://github.com/MANISHUKIRADE/nodemailer#readme"
+}
